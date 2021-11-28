@@ -77,14 +77,23 @@ hittable_list random_scene() {
     return world;
 }
 
-int main() {
+int main(int argc, char **argv)  {
 
     // Image
 
     auto aspect_ratio = 16.0 / 9.0;
-    int image_width = 400;
+    int image_width = 1200;
     int samples_per_pixel = 50;
-    const int max_depth = 10;
+    int max_depth = 10;
+
+    std::cerr << "args: " << argc << std::endl;
+    if (argc == 4){
+        image_width = atoi(argv[1]);
+        samples_per_pixel = atoi(argv[2]);
+        max_depth = atoi(argv[3]);
+        std::cerr << "args: " << image_width << ' ' <<samples_per_pixel <<' '<<max_depth << std::endl;
+    }
+    
 
     // World
 

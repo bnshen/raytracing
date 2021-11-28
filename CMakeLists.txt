@@ -1,8 +1,6 @@
 
 # set the project name
 project(raytracing1)
-set(CMAKE_C_COMPILER /opt/homebrew/bin/gcc-11)
-set(CMAKE_CXX_COMPILER /opt/homebrew/bin/g++-11)
 set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_CXX_FLAGS "-Wall -Wextra")
